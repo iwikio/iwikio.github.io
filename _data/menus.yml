@@ -26,4 +26,5 @@ footermenu:
 
 - title: Contact
   url: "contact/"
-
+- title: Sitemap
+  url: "sitemap01.html"
