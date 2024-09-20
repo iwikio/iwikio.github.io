@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+  // Current URL
+  const currentURL = window.location.href;
+
+  // Check if the URL matches the pattern "https://iwikio.github.io/en/*"
+  const pattern = /^https:\/\/iwikio\.github\.io\/en\/(.*)/;
+
+  const match = currentURL.match(pattern);
+
+  // If the pattern matches, perform the redirect
+  if (match) {
+    const newPath = match[1];  // Capture everything after "/en/"
+    const newURL = `https://77.io.vn/en/${newPath}`;
+
+    // Use a 301 redirect by setting the location and status code manually
+    window.location.replace(newURL);  // JavaScript can't send HTTP headers, so .replace() is a client-side 301 equivalent
+  }
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="{{ site.baseurl }}/{{site.favicon}}">
@@ -128,24 +146,7 @@ gtag('config', '{{site.ganalytics}}');
 <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>   
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>    
 <script type='text/javascript' src='//pl24383740.cpmrevenuegate.com/bc/2f/55/bc2f5525713994e167a02df696a0cc78.js'></script>
-<script>
-  // Current URL
-  const currentURL = window.location.href;
 
-  // Check if the URL matches the pattern "https://iwikio.github.io/en/*"
-  const pattern = /^https:\/\/iwikio\.github\.io\/en\/(.*)/;
-
-  const match = currentURL.match(pattern);
-
-  // If the pattern matches, perform the redirect
-  if (match) {
-    const newPath = match[1];  // Capture everything after "/en/"
-    const newURL = `https://77.io.vn/en/${newPath}`;
-
-    // Use a 301 redirect by setting the location and status code manually
-    window.location.replace(newURL);  // JavaScript can't send HTTP headers, so .replace() is a client-side 301 equivalent
-  }
-</script>
 
 </body>
     
